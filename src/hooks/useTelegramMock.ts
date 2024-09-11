@@ -27,6 +27,7 @@ export function useTelegramMock(): void {
       // enables modifying the window object.
       shouldMock = !!sessionStorage.getItem('____mocked');
     } catch (e) {
+      console.log(e);
       shouldMock = true;
     }
 
