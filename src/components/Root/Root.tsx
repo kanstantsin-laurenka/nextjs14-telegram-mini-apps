@@ -65,13 +65,13 @@ function RootInner({ children }: PropsWithChildren) {
   }, [debug]);
 
   return (
-    <NextUIProvider>
-      <TonConnectUIProvider manifestUrl={manifestUrl}>
-        <SDKProvider acceptCustomStyles debug={debug}>
+    <SDKProvider acceptCustomStyles debug={debug}>
+      <NextUIProvider>
+        <TonConnectUIProvider manifestUrl={manifestUrl}>
           <App>{children}</App>
-        </SDKProvider>
-      </TonConnectUIProvider>
-    </NextUIProvider>
+        </TonConnectUIProvider>
+      </NextUIProvider>
+    </SDKProvider>
   );
 }
 
