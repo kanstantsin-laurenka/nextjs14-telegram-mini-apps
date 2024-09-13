@@ -70,7 +70,7 @@ export function useTelegramMock(): void {
         },
         initData: parseInitData(initDataRaw),
         initDataRaw,
-        version: '7.2',
+        version: '7.8',
         platform: 'tdesktop',
       });
       sessionStorage.setItem('____mocked', '1');

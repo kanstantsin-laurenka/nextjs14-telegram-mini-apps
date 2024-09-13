@@ -8,6 +8,7 @@ import {
   useMiniApp,
   useThemeParams,
   useViewport,
+  useSwipeBehavior,
   bindMiniAppCSSVars,
   bindThemeParamsCSSVars,
   bindViewportCSSVars,
@@ -25,6 +26,9 @@ function App(props: PropsWithChildren) {
   const miniApp = useMiniApp();
   const themeParams = useThemeParams();
   const viewport = useViewport();
+
+  const swipe = useSwipeBehavior();
+  swipe.disableVerticalSwipe();
 
   useEffect(() => {
     return bindMiniAppCSSVars(miniApp, themeParams);
